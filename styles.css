@@ -6,10 +6,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 body {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
 }
 .icon {
   width: 24px;
@@ -38,10 +35,10 @@ p {
   border-radius: 50%;
 }
 .main-grid {
-  /* height: 929px; */
-  width: 1600px;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  width: 100%;
+  box-sizing: border-box;
   /* border: 1px solid black; */
 }
 /* HEADER SECTION */
@@ -189,14 +186,14 @@ main {
 }
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px;
 }
 .project-card {
   background-color: white;
   border-radius: 10px;
-  height: 200px;
+  max-height: 300px;
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -254,7 +251,7 @@ aside {
   background-color: white;
   border-radius: 10px;
   padding: 1.5em 2.5rem;
-  /* height: 300px; */
+  min-width: 280px;
 }
 .annoucements {
   margin-bottom: 1em;
@@ -286,4 +283,54 @@ aside {
 
 .trending-user:hover {
   text-decoration: underline;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .user-right {
+    gap: 1.5rem;
+  }
+  .header-btn {
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  .header-btn button {
+    padding: 8px 24px;
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .project-card {
+    max-height: 250px;
+  }
+  .annoucements,
+  .trending {
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 0 1rem;
+  }
+  .header-left,
+  .header-right {
+    gap: unset;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .sidebar-grid {
+    max-width: 220px;
+  }
+  .sidebar-heading h2 {
+    font-size: 1.2rem;
+  }
+  .sidebar-links ul li a {
+    font-size: 15px;
+  }
 }
