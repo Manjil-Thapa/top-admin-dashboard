@@ -108,6 +108,9 @@ input:focus {
   border-radius: 20px;
   cursor: pointer;
 }
+.header-btn button:hover {
+  background-color: #1992d4c5;
+}
 .header-btn a {
   color: white;
 }
