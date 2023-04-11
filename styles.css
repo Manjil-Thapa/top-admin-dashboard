@@ -71,8 +71,9 @@ header {
   margin: 0 10px;
   padding: 0 8px;
 }
+
 input:focus {
-  outline: none;
+  outline-color: #1992d49c;
 }
 .search img:hover {
   cursor: pointer;
